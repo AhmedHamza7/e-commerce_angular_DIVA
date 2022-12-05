@@ -1,0 +1,31 @@
+$main-color: rgb(12, 182, 139);
+// rgb(9, 105, 89)
+%links {
+    text-decoration: none;
+    color:white;
+}
+nav {
+    background: linear-gradient(to right , rgb(12, 182, 139) ,$main-color);
+    color:white;
+    
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;   // to become perfect center
+        width: 15%;
+         li {
+            padding: 0 10px;
+            a {
+                @extend %links;
+            }
+         }
+    }
+}

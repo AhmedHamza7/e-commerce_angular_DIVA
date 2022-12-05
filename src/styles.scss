@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@font-face {
+    font-family: 'main';
+    src: url('./assets/fonts/Jost-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'main-bold';
+    src: url('./assets/fonts/Jost-Bold.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+    border: none;
+    font-family: 'main';
+}
