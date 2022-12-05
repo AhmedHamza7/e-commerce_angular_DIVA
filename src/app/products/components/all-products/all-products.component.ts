@@ -14,6 +14,29 @@ export class AllProductsComponent implements OnInit {
 
   allProducts: any[] = []
   cateNames:string[] = []
+
+  isLoading:boolean = false;
+
+  filteringProducts(e:any){
+
+    let cate = e.target.value
+    this.isLoading = true;
+    
+    this._productService.filterCategory(cate).subscribe((res:any) =>{
+
+      this.allProducts = res
+      this.isLoading = false;
+
+
+      if(cate == 'all') {
+        this._productService.getAllProducts().subscribe((res:any) => {
+          console.log(res);
+          
+          this.allProducts = res
+      })
+      }
+    })
+  }
   ngOnInit(): void {
     this._productService.getAllProducts().subscribe((res:any) => {
       console.log(res);
@@ -29,6 +52,8 @@ export class AllProductsComponent implements OnInit {
     
   })
 
+
+  
 
 }
 

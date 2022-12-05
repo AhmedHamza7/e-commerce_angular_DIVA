@@ -21,16 +21,16 @@
   </div>
 
 
-<div class="container">
+<div class="container pb-5">
     <div class="content">
         <div class="categories w-25">
-            <select class="form-control">
+            <select class="form-control" (change)="filteringProducts($event)">
                 <option value="all">All</option>
                 <option *ngFor="let cate of cateNames" [value]="cate">{{cate}}</option>
             </select>
         </div>
     
-        <div class="row">
+        <div class="row" *ngIf="!isLoading">
             <div class="col-sm-12 col-md-6 col-xl-4 col-xxl-3 d-flex g-5" *ngFor="let product of allProducts">
                     <div class="item">
                         <img [src]="product.image" class="w-100 mb-3" alt="">
@@ -51,5 +51,10 @@
                     </div>
             </div>
         </div>
+    </div>
+
+
+    <div class="text-center">
+      <app-spinner *ngIf="isLoading"></app-spinner>
     </div>
 </div>

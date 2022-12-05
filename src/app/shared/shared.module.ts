@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http'
 import { MinimizeDescPipe } from '../minimize-desc.pipe';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    MinimizeDescPipe
+    MinimizeDescPipe,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { MinimizeDescPipe } from '../minimize-desc.pipe';
   ],
   exports: [
     HeaderComponent,
-    MinimizeDescPipe
+    MinimizeDescPipe,
+    SpinnerComponent
 
   ]
 })

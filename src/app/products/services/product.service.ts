@@ -18,4 +18,8 @@ export class ProductService {
   getCategoriesNames(){
     return this._httpClient.get(environment.baseApi + 'products/categories')
   }
+
+  filterCategory(cate:string){
+    return this._httpClient.get(environment.baseApi + `products/category/${cate}`)
+  }
 }
