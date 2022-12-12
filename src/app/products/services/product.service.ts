@@ -22,4 +22,8 @@ export class ProductService {
   filterCategory(cate:string){
     return this._httpClient.get(environment.baseApi + `products/category/${cate}`)
   }
+
+  getProductById(id:any){
+    return this._httpClient.get(environment.baseApi + `products/${id}`)
+  }
 }

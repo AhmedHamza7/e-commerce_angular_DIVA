@@ -4,6 +4,9 @@ import { AllProductsComponent } from './components/all-products/all-products.com
 import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 import { MinimizeDescPipe } from '../minimize-desc.pipe';
 import { SharedModule } from '../shared/shared.module';
+import { ProductComponent } from './components/product/product.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -11,11 +14,14 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     AllProductsComponent,
     ProductsDetailsComponent,
+    ProductComponent,
+    CarouselComponent,
 
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ]
 })
 export class ProductsModule { }

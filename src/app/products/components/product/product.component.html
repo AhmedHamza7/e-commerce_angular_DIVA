@@ -1,0 +1,27 @@
+<div class="item">
+    <div  routerLink="/details/{{data.id}}">
+        <img [src]="data.image" class="w-100 mb-3" alt="">
+
+    <div class="body">
+        <h4 class="text-center">{{data.title | minimizeDesc:3}}</h4>
+        <p>{{data.description | minimizeDesc:15}} ...</p>
+    </div>
+    </div>
+
+    <div class="product-footer d-flex justify-content-between align-items-center">
+        <button class="fw-bold" *ngIf="!toQuantity" (click)="toQuantity = true">Add to cart</button>
+
+        <div class="quantity-details d-flex align-items-center"  *ngIf="toQuantity"  >
+        <label for="quantity">Quantity: </label>
+        <input type="number" id="quantity" class="form-control w-25 mx-2" [(ngModel)]="quantity">
+        <button class="fw-bold" (click)="sendData()">Add</button>
+        </div>
+
+        <span  class="fw-bold">{{data.price | currency:'EUR'}}</span>
+    </div>
+    
+    <span class="rate text-white fw-bold fs-6">
+        <i class="fa-solid fa-star text-warning"></i>
+        {{data.rating.rate}}
+    </span>
+</div>

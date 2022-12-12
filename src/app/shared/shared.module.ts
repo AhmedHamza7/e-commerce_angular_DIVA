@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http'
 import { MinimizeDescPipe } from '../minimize-desc.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     CommonModule,
     RouterModule,
     HttpClientModule,
+    FormsModule,
     
   ],
   exports: [
     HeaderComponent,
     MinimizeDescPipe,
-    SpinnerComponent
+    SpinnerComponent,
+    FormsModule,
 
   ]
 })

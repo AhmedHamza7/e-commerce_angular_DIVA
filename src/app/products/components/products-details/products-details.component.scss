@@ -1,0 +1,31 @@
+$transition: 0.4s all ease;
+$main-color: rgb(12, 182, 139);
+
+
+.rate {
+    background-color: $main-color;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px 15px;
+    font-size: 26px;
+    
+}
+
+.title {
+    font-size: 28px;
+    background-color: $main-color;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 40.2px;
+}
+
+.product-info {
+    span {
+        color: $main-color;
+        margin-right: 10px;
+    }
+}
