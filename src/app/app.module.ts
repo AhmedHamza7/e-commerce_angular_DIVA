@@ -9,6 +9,7 @@ import { AllProductsComponent } from './products/components/all-products/all-pro
 import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { MinimizeDescPipe } from './minimize-desc.pipe';
+import { CartsModule } from './carts/carts.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MinimizeDescPipe } from './minimize-desc.pipe';
     AppRoutingModule,
     SharedModule,
     ProductsModule,
+    CartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

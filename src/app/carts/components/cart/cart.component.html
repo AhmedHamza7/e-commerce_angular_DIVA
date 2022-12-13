@@ -1,1 +1,64 @@
-<p>cart works!</p>
+<div class="container mt-5">
+    <div class="box d-flex justify-content-center flex-wrap">
+        <div class="cart-head w-50 mb-5">
+            <h2 class="fw-bold">Shopping Cart</h2>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="fs-5">You have <span>{{cartItems.length}}</span> Items in your cart</p>
+                <button class="btn btn-outline-danger" (click)="clearAllData()">
+                    Clear Shopping cart
+                </button>
+            </div>
+        </div>
+
+        <div class="cart-body w-100">
+            <div class="cart-table">
+                <table class="text-center w-100  mb-3">
+                    <thead>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let product of cartItems; let i = index">
+                            <td>
+                                <img [src]="product.item.image"/>
+                            </td>
+                            <td>
+                                {{product.item.title}}
+                            </td>
+                            <td>
+                                {{product.item.price | currency:"EUR"}}
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-dark" (click)="addAmount(i)">+</button>
+                                <input type="number" class="quantity mx-2 text-center w-25" min="1" [(ngModel)]="product.quantity" (change)="updateOnChange()">
+                                <button class="btn btn-outline-dark" (click)="minusAmount(i)">-</button>
+                            </td>
+                            <td>
+                                {{product.quantity * product.item.price | currency:'EUR'}}
+                            </td>
+                            <td>
+                                <button class="btn btn-danger"  (click)="deleteItem(i)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-footer d-flex align-items-center justify-content-around my-3">
+                    <div class="total fw-bold fs-4">
+                        <p>Total: {{total}}</p>
+                    </div>
+                    <button class="btn btn-success" (click)="pushCart()">Order Now</button>
+                </div>
+                <div class="success bg-success my-4" *ngIf="success">
+                    <p class="text-white text-center py-2 my-2 fs-6 fw-bold">Your order is successfully send <i class="fa-solid fa-circle-check"></i></p>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>

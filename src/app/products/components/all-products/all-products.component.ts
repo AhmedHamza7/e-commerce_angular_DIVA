@@ -65,16 +65,19 @@ if(this.addedCart.find(item => item.item.id == e.item.id)) {
 } else{
   this.addedCart.push(e)
 }
+  console.log(this.addedCart);
+  
     localStorage.setItem('addedToCart', JSON.stringify(this.addedCart))
-    
   }
   ngOnInit(): void {
+
+    // console.log(JSON.parse(localStorage.getItem('addedToCart') || ''))
+    
     if(localStorage.getItem('addedToCart') != null) {
       this.addedCart = JSON.parse(localStorage.getItem('addedToCart') || '')
-
-      console.log(this.addedCart);
+    //   console.log(this.addedCart);
       
-    }
+    // }
 
 this.getProducts()
 this.getCateName()
@@ -85,4 +88,4 @@ this.getCateName()
 
 }
 
-}
+  }}

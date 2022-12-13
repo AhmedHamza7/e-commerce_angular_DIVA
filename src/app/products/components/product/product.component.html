@@ -11,10 +11,10 @@
     <div class="product-footer d-flex justify-content-between align-items-center">
         <button class="fw-bold" *ngIf="!toQuantity" (click)="toQuantity = true">Add to cart</button>
 
-        <div class="quantity-details d-flex align-items-center"  *ngIf="toQuantity"  >
+        <div class="quantity-details d-flex align-items-center"  *ngIf="toQuantity">
         <label for="quantity">Quantity: </label>
-        <input type="number" id="quantity" class="form-control w-25 mx-2" [(ngModel)]="quantity">
-        <button class="fw-bold" (click)="sendData()">Add</button>
+        <input type="number" min="1" id="quantity" class="form-control w-25 mx-2" [(ngModel)]="quantity">
+        <button class="fw-bold" (click)="sendData()" (click)="toQuantity = false">Add</button>
         </div>
 
         <span  class="fw-bold">{{data.price | currency:'EUR'}}</span>
