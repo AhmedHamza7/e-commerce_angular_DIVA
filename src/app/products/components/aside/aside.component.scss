@@ -1,0 +1,74 @@
+$transition: 0.4s all ease;
+$main-color: rgb(12, 182, 139);
+$border-color:  #ededed;
+
+.best-sellers {
+    padding: 10px;
+    .item {
+        border: 1px solid $border-color;
+
+        .item-img{
+            img{
+                height: 100px;
+                width: 100px;
+                padding: 15px;
+
+            }
+        }
+        .item-body {
+            h5{
+                font-size: 18px;
+            }
+            .stars-icon{
+                font-size: 12px;
+            }
+            .item-discount{
+                font-size: 16px;
+
+                .discount {
+                    color:grey;
+                    text-decoration: line-through;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+.deal {
+    border: 1px solid $border-color;
+    padding: 10px;
+    .item {
+        .item-img{
+            
+            img{
+                height: 150px;
+                width: 150px;
+            }
+        }
+        .item-body {
+            h5{
+                font-size: 18px;
+            }
+            .item-discount{
+                font-size: 16px;
+                .discount {
+                    color:grey;
+                    text-decoration: line-through;
+                    margin-right: 20px;
+                }
+                .fs-1{
+                    color:$main-color;
+                }
+            }
+            .days-left {
+                color: $main-color;
+            }
+            .shop-now{
+                button{
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}

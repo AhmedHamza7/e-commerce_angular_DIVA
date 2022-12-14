@@ -6,14 +6,14 @@
                 <div class="w-75 mt-3 d-flex align-items-center justify-content-around">
                     
                     <p class="rate mt-3 fw-bold"><i class="fa-solid fa-star text-warning mx-2"></i>{{data.rating.rate}}</p>
-                    <p class="rate mt-3 fw-bold"><i class="fa-solid fa-coins text-warning mx-2"></i>{{data.price}}</p>
+                    <p class="rate mt-3 fw-bold"><i class="fa-solid fa-coins text-warning mx-2"></i>{{data.price | currency:'EUR'}}</p>
                 </div>
             </div>
             <div class="col-md-8 col-sm-12 d-flex align-items-center">
                 <div class="product-info">
                     <p class="title mb-5">{{data.title}}</p>
 
-                    <ul class="fs-2">
+                    <ul class="fs-4">
                         <li class="my-4"><span class="list-title">Desc:</span>{{data.description}}</li>
                         <li class="my-4"><span class="list-title">Count:</span>{{data.rating.count}}</li>
                         <li class="my-4"><span class="list-title">Cate:</span>{{data.category}}</li>

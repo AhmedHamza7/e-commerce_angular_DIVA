@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductComponent } from './components/product/product.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { RouterModule } from '@angular/router';
+import { AsideComponent } from './components/aside/aside.component';
 
 
 
@@ -16,12 +17,15 @@ import { RouterModule } from '@angular/router';
     ProductsDetailsComponent,
     ProductComponent,
     CarouselComponent,
+    AsideComponent,
+    
 
   ],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    
   ]
 })
 export class ProductsModule { }

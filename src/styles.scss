@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-
+$transition: 0.4s all ease;
+$main-color: rgb(12, 182, 139);
 
 @font-face {
     font-family: 'main';
@@ -10,6 +11,8 @@
     font-family: 'main-bold';
     src: url('./assets/fonts/Jost-Bold.ttf');
 }
+
+/* R e s e t */
 * {
     margin: 0;
     padding: 0;
@@ -24,4 +27,22 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+
+/* s c r o l    b a r */
+
+body::-webkit-scrollbar {
+    width:15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--white);
+    border-left: 1px solid hsl(0, 0%, 80%);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $main-color;
+    border: 3px solid var(--white);
+    border-radius: 10px;
 }

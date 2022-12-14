@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http'
 import { MinimizeDescPipe } from '../minimize-desc.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     MinimizeDescPipe,
-    SpinnerComponent
+    SpinnerComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +28,7 @@ import { FormsModule } from '@angular/forms';
     MinimizeDescPipe,
     SpinnerComponent,
     FormsModule,
-
+    FooterComponent,
   ]
 })
 export class SharedModule { }

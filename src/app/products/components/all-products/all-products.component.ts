@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { product } from '../../models/products';
 import { ProductService } from '../../services/product.service';
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-all-products',
@@ -12,7 +14,7 @@ export class AllProductsComponent implements OnInit {
 
   constructor(private _productService:ProductService) { }
 
-  allProducts: any[] = []
+  allProducts: product[] = []
   cateNames:string[] = []
 
   addedCart:any[] = []
@@ -70,14 +72,9 @@ if(this.addedCart.find(item => item.item.id == e.item.id)) {
     localStorage.setItem('addedToCart', JSON.stringify(this.addedCart))
   }
   ngOnInit(): void {
-
-    // console.log(JSON.parse(localStorage.getItem('addedToCart') || ''))
     
     if(localStorage.getItem('addedToCart') != null) {
       this.addedCart = JSON.parse(localStorage.getItem('addedToCart') || '')
-    //   console.log(this.addedCart);
-      
-    // }
 
 this.getProducts()
 this.getCateName()
@@ -87,5 +84,8 @@ this.getCateName()
   
 
 }
+AOS.init();
 
-  }}
+  }
+}
+
