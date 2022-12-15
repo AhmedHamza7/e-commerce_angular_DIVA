@@ -3,7 +3,9 @@
 <div class="container pb-5">
     <div class="content d-flex">
         <aside class=" w-25">
+            
             <div class="categories">
+                <h4 class="text-dark">Categories</h4>
                 <select class="form-control" (change)="filteringProducts($event)">
                     <option value="all">All</option>
                     <option *ngFor="let cate of cateNames" [value]="cate">{{cate}}</option>
@@ -14,8 +16,8 @@
         </aside>
         <div class="all-products w-75 ms-5">
             <div class="row" *ngIf="!isLoading">
-                <div class="col-sm-12 col-md-6 col-xl-4 d-flex g-5" *ngFor="let product of allProducts">
-                        <app-product data-aos="zoom-in"  [data]="product" (item)="addToCart($event)"></app-product>
+                <div class="col-sm-6 col-md-4 col-xl-4 d-flex g-5" *ngFor="let product of allProducts">
+                        <app-product class="w-100" data-aos="zoom-in"  [data]="product" (item)="addToCart($event)"></app-product>
                 </div>
             </div>
             
@@ -23,11 +25,7 @@
                 <app-spinner *ngIf="isLoading"></app-spinner>
               </div>
         </div>
-
         
     </div>
-
-
-
 </div>
 

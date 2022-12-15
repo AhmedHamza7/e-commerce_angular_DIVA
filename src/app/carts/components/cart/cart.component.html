@@ -34,14 +34,14 @@
                             </td>
                             <td>
                                 <button class="btn btn-outline-dark" (click)="addAmount(i)">+</button>
-                                <input type="number" class="quantity mx-2 text-center w-25" min="1" [(ngModel)]="product.quantity" (change)="updateOnChange()">
+                                <input type="text" class="quantity mx-2 text-center w-25" min="1" [(ngModel)]="product.quantity" (change)="updateOnChange()">
                                 <button class="btn btn-outline-dark" (click)="minusAmount(i)">-</button>
                             </td>
                             <td>
                                 {{product.quantity * product.item.price | currency:'EUR'}}
                             </td>
                             <td>
-                                <button class="btn btn-danger"  (click)="deleteItem(i)">Delete</button>
+                                <button class="btn btn-danger delete"  (click)="deleteItem(i)">Delete</button>
                             </td>
                         </tr>
                     </tbody>

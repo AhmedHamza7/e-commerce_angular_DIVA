@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { CartsService } from '../../services/carts/carts.service';
 
 
@@ -9,6 +9,7 @@ import { CartsService } from '../../services/carts/carts.service';
 })
 export class CartComponent implements OnInit {
   cartItems:any[] = []
+  
   success:boolean = false
   constructor(private _cartService:CartsService) { }
 
@@ -46,7 +47,6 @@ export class CartComponent implements OnInit {
     this.total = 0;
     for (let i = 0; i < this.cartItems.length; i++) {
     this.total += this.cartItems[i].item.price * this.cartItems[i].quantity
-    console.log(this.cartItems);
     }
   }
 
@@ -72,11 +72,13 @@ export class CartComponent implements OnInit {
    }
   ngOnInit(): void {
 
+
     
     // Get added products from localstorage
     if(localStorage.getItem('addedToCart') != null) {
       this.cartItems = JSON.parse(localStorage.getItem('addedToCart') || '')
     }
+    console.log(this.cartItems.length);
 
     this.getTotalPrice()
   }

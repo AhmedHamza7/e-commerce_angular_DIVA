@@ -1,5 +1,5 @@
-$transition: 0.4s all ease;
-$main-color: rgb(12, 182, 139);
+@use '../../../shared/styles/_variables.scss' as *;
+
 
 
 .item {
@@ -18,21 +18,17 @@ $main-color: rgb(12, 182, 139);
      }
  
      .body{
-         // height: auto;
          h4{
              padding-top:5px ;
              background-color: $main-color;
              color: white;
-             height: 40px;
+             height: 35px;
              overflow: hidden;
-             font-size: 22px;
+             font-size: 19px;
          }
          p{
-             margin: 5px;
-             border-bottom: 1px solid rgba(12, 182, 139, 0.145);
-             margin: 0;
-             height: 50px;
-             overflow: hidden;
+            color:rgb(0, 103, 77);
+            font-size: 17px;
          }
          
      }
@@ -40,7 +36,7 @@ $main-color: rgb(12, 182, 139);
      .product-footer {
          margin: 8px 3px;
          button {
-             padding: 5px 10px;
+             padding: 3px 7px;
              color: $main-color;
              background-color: white;
              border: 2px solid $main-color;

@@ -1,6 +1,5 @@
-$transition: 0.4s all ease;
-$main-color: rgb(12, 182, 139);
-$border-color:  #ededed;
+@use '../../../shared/styles/_variables.scss' as *;
+
 
 .best-sellers {
     padding: 10px;

@@ -1,23 +1,21 @@
-<div class="container my-5">
+<div class="container my-5 py-5">
     <div class="product-details"  *ngIf="!isLoading">
         <div class="row">
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-4 col-sm-12  d-flex align-items-center justify-content-center flex-wrap">
                 <img [src]="data.image" class="w-75" alt="">
                 <div class="w-75 mt-3 d-flex align-items-center justify-content-around">
-                    
-                    <p class="rate mt-3 fw-bold"><i class="fa-solid fa-star text-warning mx-2"></i>{{data.rating.rate}}</p>
-                    <p class="rate mt-3 fw-bold"><i class="fa-solid fa-coins text-warning mx-2"></i>{{data.price | currency:'EUR'}}</p>
+                    <p class="rate mt-3 fw-bold d-flex align-items-center me-2"><i class="fa-solid fa-star text-warning mx-2"></i>{{data.rating.rate}}</p>
+                    <p class="rate mt-3 fw-bold d-flex align-items-center"><i class="fa-solid fa-coins text-warning mx-2"></i>{{data.price | currency:'EUR'}}</p>
                 </div>
             </div>
             <div class="col-md-8 col-sm-12 d-flex align-items-center">
                 <div class="product-info">
                     <p class="title mb-5">{{data.title}}</p>
 
-                    <ul class="fs-4">
+                    <ul class="fs-5">
                         <li class="my-4"><span class="list-title">Desc:</span>{{data.description}}</li>
                         <li class="my-4"><span class="list-title">Count:</span>{{data.rating.count}}</li>
                         <li class="my-4"><span class="list-title">Cate:</span>{{data.category}}</li>
-                        <!-- <li>{{data.description}}</li> -->
                     </ul>
                 </div>
             </div>

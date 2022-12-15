@@ -1,5 +1,5 @@
-$transition: 0.4s all ease;
-$main-color: rgb(12, 182, 139);
+@use '../../../shared/styles/_variables.scss' as *;
+
 
 a {
     color:white;

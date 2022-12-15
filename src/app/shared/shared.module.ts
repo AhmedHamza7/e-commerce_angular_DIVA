@@ -8,6 +8,8 @@ import { MinimizeDescPipe } from '../minimize-desc.pipe';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProductsModule } from '../products/products.module';
+import { CartsModule } from '../carts/carts.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,6 @@ import { FooterComponent } from './components/footer/footer.component';
     RouterModule,
     HttpClientModule,
     FormsModule,
-    
   ],
   exports: [
     HeaderComponent,

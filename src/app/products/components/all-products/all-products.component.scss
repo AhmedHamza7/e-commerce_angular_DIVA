@@ -1,4 +1,25 @@
-$transition: 0.4s all ease;
-$main-color: rgb(12, 182, 139);
+@use '../../../shared/styles/_variables.scss' as *;
 
+
+
+@media (max-width:1200px) {
+
+    .content {
+        flex-wrap: wrap !important;
+        aside{
+            width: 75% !important;
+        }
+        app-aside {
+            display: none;
+        }
+
+        .all-products {
+            width: 100% !important;
+            margin: 0 !important;
+        }
+    }
+
+
+
+}
 

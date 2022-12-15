@@ -1,12 +1,12 @@
-<div class="item">
+<div class="item w-100">
     <div routerLink="/details/{{data.id}}">
 <div class="text-center">
-    <img [src]="data.image" class="w-75 mb-3" alt="">
+    <img [src]="data.image" class="w-75" alt="">
 
 </div>
     <div class="body">
+        <p class="text-center mb-1">{{data.category}}</p>
         <h4 class="text-center">{{data.title | minimizeDesc:3}}</h4>
-        <p>{{data.description | minimizeDesc:15}} ...</p>
     </div>
     </div>
 

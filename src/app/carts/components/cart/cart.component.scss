@@ -1,5 +1,4 @@
-$transition: 0.4s all ease;
-$main-color: rgb(12, 182, 139);
+@use '../../../shared/styles/_variables.scss' as *;
 
 
 .box {
@@ -43,7 +42,6 @@ $main-color: rgb(12, 182, 139);
 
     }
 
-
     .cart-body{
         
         .cart-table{
@@ -68,6 +66,54 @@ $main-color: rgb(12, 182, 139);
                 margin: auto;
                 letter-spacing: 3px;
                 border-radius: 50px;
+            }
+        }
+    }
+
+
+
+    /* Responsive CART */
+    @media (max-width:992px) {
+        .cart-head {
+            width: 100% !important;
+            h2 {
+                letter-spacing: 2px;
+            }
+        }
+
+
+        .cart-body{
+            .cart-table{
+                font-size: 12px;
+                table{
+                    tbody{
+                        tr{
+                            td{
+                                button {
+                                    padding: 3px 5px !important;
+                                    margin: 0 !important;
+                                 }
+                                 .delete {
+                                    height: 30px;
+
+                                 }
+                                input {
+                                    width: 30% !important;
+                                    margin: 0 !important;
+                                }
+                                img{
+                                    height: 100px;
+                                    width: 80px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .success {
+                    width: 60%;
+                    padding: 10px 20px;
+                }
             }
         }
     }

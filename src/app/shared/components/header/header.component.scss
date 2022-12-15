@@ -1,5 +1,5 @@
-$main-color: rgb(12, 182, 139);
-// rgb(9, 105, 89)
+@use '../../../shared/styles/_variables.scss' as *;
+
 %links {
     text-decoration: none;
     color:white;
@@ -8,7 +8,14 @@ nav {
     background: linear-gradient(to right , rgb(12, 182, 139) ,$main-color);
     color:white;
     
-    .content {
+    #check {
+            display: none;
+            }
+            .checkbtn {
+            display: none;
+        }
+        
+    .nav-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
