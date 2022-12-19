@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/shared/services/shared.service';
+import swal from 'sweetalert';
 import { product } from '../../models/products';
 import { ProductService } from '../../services/product.service';
+
 
 @Component({
   selector: 'app-all-products',
@@ -11,7 +14,7 @@ import { ProductService } from '../../services/product.service';
 export class AllProductsComponent implements OnInit {
 
 
-  constructor(private _productService:ProductService) { }
+  constructor(private _productService:ProductService, private _sharedService:SharedService) { }
 
   allProducts: product[] = []
   cateNames:string[] = []
@@ -62,18 +65,26 @@ export class AllProductsComponent implements OnInit {
   // A D D    P R O D U C T S   T O   C A R T S
   addToCart(e:any){
 if(this.addedCart.find(item => item.item.id == e.item.id)) {
-  alert("You already added this item before")
+  swal({
+    title:'Error',
+    text:"You already added this item before",
+    icon:'error'
+  })
 } else{
   this.addedCart.push(e)
+  swal({
+    title:'Success',
+    text:"product successfully added to the cart",
+    icon:'success'
+  })
 }
-  console.log(this.addedCart);
   
     localStorage.setItem('addedToCart', JSON.stringify(this.addedCart))
   }
-  ngOnInit(): void {
-    
-    if(localStorage.getItem('addedToCart') != null) {
 
+
+  ngOnInit(): void {
+    if(localStorage.getItem('addedToCart') != null) {
       this.addedCart = JSON.parse(localStorage.getItem('addedToCart') || '')
 
       this.getProducts()

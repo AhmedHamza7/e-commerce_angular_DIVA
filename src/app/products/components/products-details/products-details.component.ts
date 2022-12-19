@@ -16,6 +16,7 @@ export class ProductsDetailsComponent implements OnInit {
   constructor(private _activatedRoute:ActivatedRoute, private productService:ProductService) { }
 
 
+  // GET   THE PRODUCT   BY  ID   THAT   GOT   FROM   URL
   getTheProduct(){
     this.isLoading = true
 
@@ -23,18 +24,18 @@ export class ProductsDetailsComponent implements OnInit {
 
       this.data = res
       this.isLoading = false
-      
-      console.log(this.data);
-      
     })
   }
-  
+
+
   ngOnInit(): void {
+    // GET  ID  OF  THE PRODUCT  FROM  URL 
     this.id = this._activatedRoute.snapshot.paramMap.get("id")
-    console.log(this.id);
 
     this.getTheProduct()
-  }
+  } 
+
+  
 
 
 

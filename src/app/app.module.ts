@@ -10,6 +10,7 @@ import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { MinimizeDescPipe } from './minimize-desc.pipe';
 import { CartsModule } from './carts/carts.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { CartsModule } from './carts/carts.module';
     AppRoutingModule,
     SharedModule,
     ProductsModule,
-    CartsModule
+    CartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

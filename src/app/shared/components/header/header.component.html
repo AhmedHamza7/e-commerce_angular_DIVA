@@ -1,31 +1,5 @@
-<!-- <nav>
-    <div class="container">
-        <div class="content">
-            <h2 class="logo">
-                DIVA
-            </h2>
-
-            <ul>
-                <li><a routerLink="/">Products</a></li>
-                <li><a routerLink="/cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/cart">
-                        <i class="fa-solid fa-heart"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav> -->
 
 <nav>
-    <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fas fa-bars"></i>
-                </label>
     <div class="container">
         <div class="nav-header">
             <div class="nav-logo">
@@ -34,13 +8,16 @@
                 </h2>
             </div>
 
+            <div class="w-50">
+                <input class="form-control" type="text" placeholder="Enter your product name..">
+            </div>
 
             
             <div class="nav-item">
                 
                 <ul>
                     <li><a routerLink="/">Products</a></li>
-                    <li><a routerLink="/cart">
+                    <li id="cartIcon"><a routerLink="/cart">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </li>
@@ -53,3 +30,24 @@
     
     </div>
 </nav>
+
+<!--  J U S T     S T Y L E  -->
+<div class="container">
+    <div class="belowNav text-center d-flex align-items-center justify-content-between py-2">
+
+        <div class="social">
+            <i class="fa-brands fa-facebook-f mx-2"></i>
+            <i class="fa-brands fa-instagram mx-2"></i>
+            <i class="fa-brands fa-twitter mx-2"></i>
+            <i class="fa-brands fa-linkedin mx-2"></i>
+        </div>
+        <p class="m-0">FREE SHIPPING THIS WEEK ORDER OVER - $55</p>
+    
+        <select name="" id="">
+            <option value="">EUR</option>
+            <option value="">USD</option>
+        </select>
+    
+    
+    </div>
+</div>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import * as AOS from 'aos'
+
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,8 @@ import * as AOS from 'aos'
 export class AppComponent {
   title = 'e-commerce';
 
-
   ngOnInit(): void{
+    
   AOS.init();
 
   }

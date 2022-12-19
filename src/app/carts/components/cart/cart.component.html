@@ -49,12 +49,9 @@
 
                 <div class="table-footer d-flex align-items-center justify-content-around my-3">
                     <div class="total fw-bold fs-4">
-                        <p>Total: {{total}}</p>
+                        <p>Total: {{total | currency:'EUR'}}</p>
                     </div>
                     <button class="btn btn-success" (click)="pushCart()">Order Now</button>
-                </div>
-                <div class="success bg-success my-4" *ngIf="success">
-                    <p class="text-white text-center py-2 my-2 fs-6 fw-bold">Your order is successfully send <i class="fa-solid fa-circle-check"></i></p>
                 </div>
                 
             </div>
@@ -62,3 +59,5 @@
         </div>
     </div>
 </div>
+
+

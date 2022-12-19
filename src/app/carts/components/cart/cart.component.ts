@@ -1,6 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit,} from '@angular/core';
+import { SharedService } from 'src/app/shared/services/shared.service';
 import { CartsService } from '../../services/carts/carts.service';
-
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-cart',
@@ -9,9 +10,8 @@ import { CartsService } from '../../services/carts/carts.service';
 })
 export class CartComponent implements OnInit {
   cartItems:any[] = []
-  
   success:boolean = false
-  constructor(private _cartService:CartsService) { }
+  constructor(private _cartService:CartsService, private _sharedService:SharedService) { }
 
   addAmount(i:any) {
     this.cartItems[i].quantity++;
@@ -29,6 +29,7 @@ export class CartComponent implements OnInit {
     localStorage.setItem('addedToCart',JSON.stringify(this.cartItems))
   }
 
+
   deleteItem(i:any){
     this.cartItems.splice(i, 1)
 
@@ -42,6 +43,8 @@ export class CartComponent implements OnInit {
     this.getTotalPrice()
     localStorage.setItem('addedToCart',JSON.stringify(this.cartItems))
   }
+
+  // CALCULATE  TOTAL  PRICE  OF  ALL  PRODUCTS
   total:any = 0
   getTotalPrice(){
     this.total = 0;
@@ -50,11 +53,14 @@ export class CartComponent implements OnInit {
     }
   }
 
+  
   updateOnChange() {
     this.getTotalPrice()
     localStorage.setItem('addedToCart',JSON.stringify(this.cartItems))
   }
 
+
+  // S E N D   O R D E R   
    pushCart(){
     let productsDetails = this.cartItems.map(x => {
       return {productId:x.item.id, quantity:x.quantity }
@@ -67,19 +73,24 @@ export class CartComponent implements OnInit {
     }
 
     this._cartService.postCart(pushModel).subscribe(res => {
-      this.success = true
+      swal({
+        title:'success',
+        text:'Your order is successfully send ',
+        icon:'success'
+      })
+
+      this.cartItems = []
+      this.getTotalPrice()
+      localStorage.setItem('addedToCart',JSON.stringify(this.cartItems))
     })
    }
+
+
   ngOnInit(): void {
-
-
-    
     // Get added products from localstorage
     if(localStorage.getItem('addedToCart') != null) {
       this.cartItems = JSON.parse(localStorage.getItem('addedToCart') || '')
     }
-    console.log(this.cartItems.length);
-
     this.getTotalPrice()
   }
 
