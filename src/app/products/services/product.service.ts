@@ -11,19 +11,19 @@ export class ProductService {
 
   constructor(private _httpClient:HttpClient) { }
 
-  getAllProducts(){
+  getAllProducts():Observable<any>{
     return this._httpClient.get(environment.baseApi + 'products')
   }
 
-  getCategoriesNames(){
+  getCategoriesNames():Observable<any>{
     return this._httpClient.get(environment.baseApi + 'products/categories')
   }
 
-  filterCategory(cate:string){
+  filterCategory(cate:string):Observable<any>{
     return this._httpClient.get(environment.baseApi + `products/category/${cate}`)
   }
 
-  getProductById(id:any){
+  getProductById(id:any):Observable<any>{
     return this._httpClient.get(environment.baseApi + `products/${id}`)
   }
 }

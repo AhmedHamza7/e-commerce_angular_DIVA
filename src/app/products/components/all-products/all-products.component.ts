@@ -25,18 +25,15 @@ export class AllProductsComponent implements OnInit {
 
   // G  E  T    A L L   P R O D U C T S
   getProducts(){
-    this._productService.getAllProducts().subscribe((res:any) => {
-      console.log(res);
-      
-      this.allProducts = res
+    this._productService.getAllProducts().subscribe({
+      next:(res) =>  this.allProducts = res
   })
   }
 
   // G  E  T    C A T E G O R I E S   N A M E
-
   getCateName(){
-    this._productService.getCategoriesNames().subscribe((res:any) => {
-      this.cateNames = res
+    this._productService.getCategoriesNames().subscribe({
+      next:(res) => this.cateNames = res
     })
   }
 
@@ -84,13 +81,11 @@ if(this.addedCart.find(item => item.item.id == e.item.id)) {
 
 
   ngOnInit(): void {
-    if(localStorage.getItem('addedToCart') != null) {
-      this.addedCart = JSON.parse(localStorage.getItem('addedToCart') || '')
-
-      this.getProducts()
-      this.getCateName()
-    } 
-
+    // if(localStorage.getItem('addedToCart') != null) {
+    //   this.addedCart = JSON.parse(localStorage.getItem('addedToCart') || '')
+    // } 
+    this.getProducts()
+    this.getCateName()
   }
 }
 

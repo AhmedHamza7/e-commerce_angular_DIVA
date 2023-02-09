@@ -3,7 +3,6 @@
 
 
 @media (max-width:1200px) {
-
     .content {
         flex-wrap: wrap !important;
         aside{
@@ -12,13 +11,15 @@
         app-aside {
             display: none;
         }
-
         .all-products {
             width: 100% !important;
             margin: 0 !important;
         }
     }
+}
 
-
-
+@media (max-width:768px) {
+    .product {
+        padding-inline-end: 50px !important;
+    }
 }
