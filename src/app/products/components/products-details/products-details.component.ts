@@ -20,11 +20,11 @@ export class ProductsDetailsComponent implements OnInit {
   getTheProduct(){
     this.isLoading = true
 
-    this.productService.getProductById(this.id).subscribe((res)=>{
-
+    this.productService.getProductById(this.id).subscribe({
+      next:(res)=>{
       this.data = res
       this.isLoading = false
-    })
+    }})
   }
 
 

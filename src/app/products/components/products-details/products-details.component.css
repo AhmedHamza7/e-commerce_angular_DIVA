@@ -1,0 +1,29 @@
+.rate {
+  background-color: rgb(12, 182, 139);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 18px;
+}
+
+.title {
+  font-size: 22px;
+  background-color: rgb(12, 182, 139);
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+  line-height: 40.2px;
+}
+
+.product-info span {
+  color: rgb(12, 182, 139);
+  margin-right: 10px;
+}
+
+.product-details img {
+  height: 300px;
+  width: 200px;
+}/*# sourceMappingURL=products-details.component.css.map */

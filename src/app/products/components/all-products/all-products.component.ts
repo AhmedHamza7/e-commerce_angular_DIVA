@@ -25,8 +25,13 @@ export class AllProductsComponent implements OnInit {
 
   // G  E  T    A L L   P R O D U C T S
   getProducts(){
+    this.isLoading = true;
+
     this._productService.getAllProducts().subscribe({
-      next:(res) =>  this.allProducts = res
+      next:(res) => { 
+          this.allProducts = res
+          this.isLoading = false;
+      }
   })
   }
 
@@ -43,20 +48,17 @@ export class AllProductsComponent implements OnInit {
     let cate = e.target.value
     this.isLoading = true;
     
-    this._productService.filterCategory(cate).subscribe((res:any) =>{
-
-      this.allProducts = res
-      this.isLoading = false;
-
+    this._productService.filterCategory(cate).subscribe({
+      next:(res:any) =>{
+        this.allProducts = res
+        this.isLoading = false;
 
       if(cate == 'all') {
-        this._productService.getAllProducts().subscribe((res:any) => {
-          console.log(res);
-          
-          this.allProducts = res
-      })
+        this._productService.getAllProducts().subscribe({
+          next:(res:any) => this.allProducts = res
+        })
       }
-    })
+    }})
   }
 
   // A D D    P R O D U C T S   T O   C A R T S

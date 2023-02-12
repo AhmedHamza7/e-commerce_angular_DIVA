@@ -1,0 +1,54 @@
+.best-sellers {
+  padding: 10px;
+}
+.best-sellers .item {
+  border: 1px solid #ededed;
+}
+.best-sellers .item .item-img img {
+  height: 100px;
+  width: 100px;
+  padding: 15px;
+}
+.best-sellers .item .item-body h5 {
+  font-size: 18px;
+}
+.best-sellers .item .item-body .stars-icon {
+  font-size: 12px;
+}
+.best-sellers .item .item-body .item-discount {
+  font-size: 16px;
+}
+.best-sellers .item .item-body .item-discount .discount {
+  color: grey;
+  text-decoration: line-through;
+  margin-right: 20px;
+}
+
+.deal {
+  border: 1px solid #ededed;
+  padding: 10px;
+}
+.deal .item .item-img img {
+  height: 150px;
+  width: 150px;
+}
+.deal .item .item-body h5 {
+  font-size: 18px;
+}
+.deal .item .item-body .item-discount {
+  font-size: 16px;
+}
+.deal .item .item-body .item-discount .discount {
+  color: grey;
+  text-decoration: line-through;
+  margin-right: 20px;
+}
+.deal .item .item-body .item-discount .fs-1 {
+  color: rgb(12, 182, 139);
+}
+.deal .item .item-body .days-left {
+  color: rgb(12, 182, 139);
+}
+.deal .item .item-body .shop-now button {
+  background-color: rgb(12, 182, 139);
+}/*# sourceMappingURL=aside.component.css.map */

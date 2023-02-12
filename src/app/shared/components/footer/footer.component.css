@@ -1,0 +1,69 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background: rgb(12, 182, 139);
+  padding: 30px 0;
+}
+footer .footer-nav {
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+footer .footer-nav .footer-nav-list {
+  margin-bottom: 20px;
+}
+footer .footer-nav .nav-title {
+  position: relative;
+  color: white;
+  font-size: var(--fs-7);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+footer .footer-nav .nav-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  width: 60px;
+  height: 1px;
+}
+footer .footer-nav-item {
+  padding: 3px 0;
+}
+footer .footer-nav-link,
+footer .footer-nav-item .content {
+  width: -moz-max-content;
+  width: max-content;
+  color: white;
+  font-size: var(--fs-7);
+  text-transform: capitalize;
+  transition: 0.4s all ease;
+}
+footer .footer-nav-item.flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+footer .footer-nav-item .content {
+  font-style: normal;
+  margin-bottom: 5px;
+}
+footer .footer-bottom {
+  margin-bottom: 50px;
+  text-align: center;
+}
+footer .payment-img {
+  max-width: 335px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+footer .copyright {
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+}/*# sourceMappingURL=footer.component.css.map */

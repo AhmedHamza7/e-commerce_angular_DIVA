@@ -1,0 +1,50 @@
+.item {
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+}
+.item img {
+  height: 200px;
+  padding: 25px;
+  transition: 0.4s all ease;
+}
+.item img:hover {
+  transform: scale(1.2, 1.2);
+}
+.item .body h4 {
+  padding-top: 5px;
+  background-color: rgb(12, 182, 139);
+  color: white;
+  height: 35px;
+  overflow: hidden;
+  font-size: 19px;
+}
+.item .body p {
+  color: rgb(0, 103, 77);
+  font-size: 17px;
+}
+.item .product-footer {
+  margin: 8px 3px;
+}
+.item .product-footer button {
+  padding: 3px 7px;
+  color: rgb(12, 182, 139);
+  background-color: white;
+  border: 2px solid rgb(12, 182, 139);
+  transition: 0.4s all ease;
+}
+.item .product-footer button:hover {
+  color: white;
+  background-color: rgb(12, 182, 139);
+}
+.item .product-footer span {
+  color: rgb(12, 182, 139);
+}
+.item .rate {
+  background-color: rgb(12, 182, 139);
+  padding: 3px 10px;
+  position: absolute;
+  right: -25px;
+  top: 3px;
+  border-radius: 5px;
+}/*# sourceMappingURL=product.component.css.map */

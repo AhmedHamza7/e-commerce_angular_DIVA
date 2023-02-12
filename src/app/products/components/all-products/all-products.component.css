@@ -1,0 +1,21 @@
+@media (max-width: 1200px) {
+  .content {
+    flex-wrap: wrap !important;
+  }
+  .content aside {
+    width: 75% !important;
+  }
+  .content app-aside {
+    display: none;
+  }
+  .content .all-products {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .product {
+    -webkit-padding-end: 50px !important;
+            padding-inline-end: 50px !important;
+  }
+}/*# sourceMappingURL=all-products.component.css.map */

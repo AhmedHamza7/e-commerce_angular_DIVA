@@ -1,0 +1,66 @@
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  background: linear-gradient(to right, rgb(12, 182, 139), rgb(12, 182, 139));
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  display: block;
+}
+nav .nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  width: 15%;
+}
+nav ul li {
+  padding: 0 10px;
+}
+nav ul #cartIcon {
+  position: relative;
+  border-left: 1px solid white;
+}
+nav ul #cartIcon span {
+  position: absolute;
+  top: -10px;
+  right: -3px;
+  background-color: rgb(211, 0, 0);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.belowNav {
+  border-bottom: 1px solid rgb(12, 182, 139);
+}
+
+@media (max-width: 768px) {
+  .nav-input {
+    display: none;
+    width: 40% !important;
+  }
+  .nav-input input {
+    font-size: 14px !important;
+    padding: 5px !important;
+  }
+  .belowNav .social {
+    display: none !important;
+  }
+  .belowNav p, .belowNav select {
+    font-size: 14px !important;
+  }
+}/*# sourceMappingURL=header.component.css.map */

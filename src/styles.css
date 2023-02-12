@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "main";
+  src: url("./assets/fonts/Jost-Regular.ttf");
+}
+@font-face {
+  font-family: "main-bold";
+  src: url("./assets/fonts/Jost-Bold.ttf");
+}
+/* R e s e t */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "main";
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* s c r o l    b a r */
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--white);
+  border-left: 1px solid hsl(0deg, 0%, 80%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(12, 182, 139);
+  border: 3px solid var(--white);
+  border-radius: 10px;
+}/*# sourceMappingURL=styles.css.map */
